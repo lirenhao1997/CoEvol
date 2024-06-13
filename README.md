@@ -17,7 +17,7 @@ CoEvol: Constructing Better Responses for Instruction Finetuning through Multi-A
 - Theoretically, CoEvol is capable of refining any IFT data sample that includes an instruction and an original response.
 In our implementation, data formats aligned to Alpaca and ShareGPT are supported.
 - In our paper, we explored the potential of CoEvol on top of high-quality data after the data selection process employed by [Deita](https://github.com/hkust-nlp/deita). Please refer to their repository for a detailed data selection pipeline.
-- The formatted data should be placed in the ```data/``` directory, in alignment with the ```--root_path <YOUR_DATA_PATH>``` specification in the running scripts.
+- The formatted data should be placed in the ```data/``` directory, in alignment with the ```--root_path <YOUR_DATA_PATH>``` and ```--dataset_name <YOUR_DATASET_NAME>``` specification in the running scripts.
 
 ### Environment Settings
 

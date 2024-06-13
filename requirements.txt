@@ -1,0 +1,8 @@
+openai >= 1.12.0
+tqdm
+jsonlines
+requests
+tiktoken
+
+# For querying GLM series models
+zhipuai

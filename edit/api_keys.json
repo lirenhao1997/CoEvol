@@ -1,0 +1,9 @@
+{
+    "openai": "<YOUR_OPENAI_KEY>",
+    "proxy": "<YOUR_PROXY_KEY>",
+    "ernie": {
+        "client_id": "<YOUR_ERNIE_ID>",
+        "client_secret": "<YOUR_ERNIE_SECRET>"
+    },
+    "glm": "<YOUR_GLM_KEY>"
+}

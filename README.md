@@ -19,7 +19,7 @@ In our implementation, data formats aligned to Alpaca and ShareGPT are supported
 - In our paper, we explored the potential of CoEvol on top of high-quality data after the data selection process employed by [Deita](https://github.com/hkust-nlp/deita). Please refer to their repository for a detailed data selection pipeline.
 - The formatted data should be placed in the ```data/``` directory, in alignment with the ```--root_path <YOUR_DATA_PATH>``` and ```--dataset_name <YOUR_DATASET_NAME>``` specification in the running scripts.
 
-### Environment Settings
+### Environment Configuration
 
 **Run CoEvol via External API**
 
@@ -44,6 +44,13 @@ python -u -m vllm.entrypoints.openai.api_server \
 1. Use the parameters ```--save_mem``` and ```--save_log``` to save agent memories and running logs, respectively.
 2. Employ the parameters ```--start_indx``` and ```--end_indx``` to control the range of data evolution. If these parameters are not set, CoEvol will process the entire dataset for data evolution.
 3. Utilize the parameter ```--num_workers``` to control the number of multi-threads used for concurrent data evolution, which should be adjusted to be compatible with the rate limit of your APIs or the load capacity of your local server.
+
+### Data Organization for SFT
+Once you successfully run the framework, both intermediate processes and full results will be stored in the directory ```./edit/res/<JOB_NAME>```.
+To obtain the evolved SFT data in JSON format, use the appropriate functions within the script ```edit/data_post_process.py```, according to the data you have used.
+
+## Fine-tuning with Evolved Data
+For supervised fine-tuning, we utilize [llama-factory](https://github.com/hiyouga/LLaMA-Factory) to train our model. Please consult their repository for detailed instructions.
 
 ## Citation
 If you find the content of this project helpful, please cite our paper as follows:
